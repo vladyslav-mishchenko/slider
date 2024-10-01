@@ -10,6 +10,6 @@ COPY . .
 
 USER node
 
-EXPOSE 5173 7777 9999
+EXPOSE 7777 9999
 
 CMD ["node"]

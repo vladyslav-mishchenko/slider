@@ -7,7 +7,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: frontend
+    image: slider
     volumes:
      - .:/app
     ports:

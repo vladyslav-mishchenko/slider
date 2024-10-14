@@ -23,6 +23,10 @@ body {}
     // content: 1fr
     // footer auto
     grid-template-rows: auto 1fr auto;
+
+    .content{
+        background-color: #8d8d8d;
+    }
 }
 
 .g {

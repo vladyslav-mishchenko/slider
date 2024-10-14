@@ -17,11 +17,19 @@ for(let i = 0; i < miniatures.length; i++){
     });
 }
 
-setTimeout(changeSlide, firstStartTimeout);
+setTimeout(firstStart, firstStartTimeout);
+
+function firstStart(){
+    run();
+}
+
+function run(){
+    increment();
+    changeSlide();
+    setTimeout(run, changeSlideTimeout);
+}
 
 function changeSlide(){
-    increment();
-
     slides[slide].classList.add('active');
     miniatures[slide].classList.add('active');
 
@@ -31,8 +39,6 @@ function changeSlide(){
             miniatures[i].classList.remove('active');
         }
     }
-
-    setTimeout(changeSlide, changeSlideTimeout);
 }
 
 function increment(){

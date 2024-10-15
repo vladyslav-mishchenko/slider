@@ -12,16 +12,10 @@ let setTimeoutId = null;
 leftBtn.addEventListener("click", prev);
 rightBtn.addEventListener("click", next);
 
-for(let i = 0; i < miniatures.length; i++){
-    miniatures[i].addEventListener('click', function(e){
-        console.log(this.getAttribute('data-slide'));
-    });
-}
-
-setTimeoutId = setTimeout(start, firstStartTimeout);
+start();
 
 function start(){
-    run();
+    setTimeoutId = setTimeout(run, firstStartTimeout);
 }
 
 function stop(){
@@ -40,6 +34,7 @@ function next(){
     animationOff();
     increment();
     changeSlide();
+    start();
 }
 
 function prev(){
@@ -47,6 +42,7 @@ function prev(){
     animationOff();
     decrement();
     changeSlide();
+    start();
 }
 
 function changeSlide(){

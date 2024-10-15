@@ -4,7 +4,7 @@ const miniatures = document.querySelectorAll("#mainSlider .main-slider--miniatur
 const leftBtn = document.querySelector("#mainSlider .left-btn");
 const rightBtn = document.querySelector("#mainSlider .right-btn");
 
-let slide = 0;
+let slide = startFromSlide();
 let firstStartTimeout = 7000;
 let changeSlideTimeout = 5000;
 let setTimeoutId = null;
@@ -85,13 +85,21 @@ function animationOn(){
     }
 }
 
+function startFromSlide(){
+    for(let i = 0; i < slides.length; i++){
+        if(slides[i].classList.contains('active')){
+            return i;
+        }
+    }
+}
+
 for(let i = 0; i < miniatures.length; i++){
     miniatures[i].addEventListener('click', function(){
         stop();
         animationOff();
 
         slide = this.getAttribute('data-slide');
-        
+
         changeSlide();
         start();
     });

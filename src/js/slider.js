@@ -84,3 +84,15 @@ function animationOn(){
         slides[i].classList.remove('na');
     }
 }
+
+for(let i = 0; i < miniatures.length; i++){
+    miniatures[i].addEventListener('click', function(){
+        stop();
+        animationOff();
+
+        slide = this.getAttribute('data-slide');
+        
+        changeSlide();
+        start();
+    });
+}

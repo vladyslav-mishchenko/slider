@@ -7,9 +7,10 @@ const rightBtn = document.querySelector("#mainSlider .right-btn");
 let slide = 0;
 let firstStartTimeout = 7000;
 let changeSlideTimeout = 5000;
+let setTimeoutId = null;
 
-leftBtn.addEventListener("click", function(){console.log('left')});
-rightBtn.addEventListener("click", function(){console.log('right')});
+leftBtn.addEventListener("click", prev);
+rightBtn.addEventListener("click", next);
 
 for(let i = 0; i < miniatures.length; i++){
     miniatures[i].addEventListener('click', function(e){
@@ -17,16 +18,35 @@ for(let i = 0; i < miniatures.length; i++){
     });
 }
 
-setTimeout(firstStart, firstStartTimeout);
+setTimeoutId = setTimeout(start, firstStartTimeout);
 
-function firstStart(){
+function start(){
     run();
 }
 
+function stop(){
+    clearTimeout(setTimeoutId);
+}
+
 function run(){
+    animationOn();
     increment();
     changeSlide();
-    setTimeout(run, changeSlideTimeout);
+    setTimeoutId = setTimeout(run, changeSlideTimeout);
+}
+
+function next(){
+    stop();
+    animationOff();
+    increment();
+    changeSlide();
+}
+
+function prev(){
+    stop();
+    animationOff();
+    decrement();
+    changeSlide();
 }
 
 function changeSlide(){
@@ -53,6 +73,18 @@ function decrement(){
     slide--;
 
     if(slide < 0){
-        slide = slides.length - 1;
+        slide = (slides.length - 1);
+    }
+}
+
+function animationOff(){
+    for(let i = 0; i < slides.length; i++){
+        slides[i].classList.add('na');
+    }
+}
+
+function animationOn(){
+    for(let i = 0; i < slides.length; i++){
+        slides[i].classList.remove('na');
     }
 }

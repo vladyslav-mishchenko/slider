@@ -3,14 +3,13 @@ const slides = document.querySelectorAll("#mainSlider .main-slider--slides > .sl
 const miniatures = document.querySelectorAll("#mainSlider .main-slider--miniatures > .miniature");
 const leftBtn = document.querySelector("#mainSlider .left-btn");
 const rightBtn = document.querySelector("#mainSlider .right-btn");
+const center = document.querySelector("#mainSlider .center");
 
 let slide = startFromSlide();
 let firstStartTimeout = 7000;
 let changeSlideTimeout = 5000;
 let setTimeoutId = null;
-
-leftBtn.addEventListener("click", prev);
-rightBtn.addEventListener("click", next);
+let touchStartX = null;
 
 start();
 
@@ -104,3 +103,20 @@ for(let i = 0; i < miniatures.length; i++){
         start();
     });
 }
+
+function swipeStart(e){
+    touchStartX = e.touches[0].clientX;
+}
+
+function swipeEnd(e){
+    if(touchStartX > e.changedTouches[0].clientX){
+        prev();
+    }else{
+        next();
+    }
+}
+
+leftBtn.addEventListener("click", prev);
+rightBtn.addEventListener("click", next);
+center.addEventListener("touchstart", swipeStart)
+center.addEventListener("touchend", swipeEnd);

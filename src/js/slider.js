@@ -1,7 +1,7 @@
 class Elements {
     constructor(slider) {
-        this.slides = this.els(slider + ' .main-slider--slides > .slide');
-        this.miniatures = this.els(slider + ' .main-slider--miniatures > .miniature');
+        this.slides = this.els(slider + ' .img-slider--slides > .slide');
+        this.miniatures = this.els(slider + ' .img-slider--miniatures > .miniature');
         this.leftBtn = this.el(slider + ' .left-btn');
         this.rightBtn = this.el(slider + ' .right-btn');
         this.center = this.el(slider + ' .center');

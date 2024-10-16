@@ -1,8 +1,8 @@
-.main-slider{
+.img-slider{
     position: relative;
 }
 
-.main-slider--sections{
+.img-slider--sections{
     position: absolute;
     top: 0;
     right: 0;
@@ -43,7 +43,7 @@
     }
 }
 
-.main-slider--slides {
+.img-slider--slides {
     position: relative;
 
     .slide {
@@ -70,7 +70,7 @@
     }
 }
 
-.main-slider--miniatures{
+.img-slider--miniatures{
     padding: 10px 0;
 
     display: flex;
@@ -105,7 +105,7 @@
     }
 }
 
-.main-slider--nav-btn{
+.img-slider--nav-btn{
     padding: 0 15px;
 
     button{

@@ -1,9 +1,24 @@
+@use './icons';
+
+// ==============================
+// Fonts
+// ==============================
+
+// ==============================
+// Sen
+
 @font-face {
-	font-family: 'LostinWild';
-    src: url('./fonts/lost/LostinWild.woff') format('woff');
+    font-family: 'f101';
+    src: url('./fonts/sen/Sen-Regular.ttf');
 }
 
 @font-face {
-    font-family: 'Aliens';
-    src: url('./fonts/aliens/aliens.ttf');
+    font-family: 'f102';
+    src: url('./fonts/sen/Sen-Bold.ttf');
 }
+
+@font-face {
+    font-family: 'f103';
+    src: url('./fonts/sen/Sen-Medium.ttf');
+}
+// ==============================

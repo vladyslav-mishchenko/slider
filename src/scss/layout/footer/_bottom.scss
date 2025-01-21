@@ -1,0 +1,95 @@
+@use '../../settings/breakpoints';
+@use '../../settings/variables' as v;
+
+.footer-bottom {
+    min-height: 145px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    grid-template-areas: "copyright social";
+
+    // @include breakpoints.media-breakpoint-only(xl) {}
+
+    // @include breakpoints.media-breakpoint-only(lg) {}
+
+    // @include breakpoints.media-breakpoint-only(md) {}
+
+    // @include breakpoints.media-breakpoint-only(sm) {}
+
+    // @include breakpoints.media-breakpoint-only(xs) {}
+
+    @include breakpoints.media-breakpoint-down(md) {
+        min-height: auto;
+        padding-top: 50px;
+
+        grid-template-columns: auto;
+        grid-template-areas:
+            "social"
+            "copyright";
+        gap: 25px;
+    }
+
+    >.c1 {
+        grid-area: copyright;
+    }
+
+    >.c2 {
+        grid-area: social;
+        justify-self: end;
+
+        // @include breakpoints.media-breakpoint-only(xl) {}
+
+        // @include breakpoints.media-breakpoint-only(lg) {}
+
+        // @include breakpoints.media-breakpoint-only(md) {}
+
+        // @include breakpoints.media-breakpoint-only(sm) {}
+
+        // @include breakpoints.media-breakpoint-only(xs) {}
+
+        @include breakpoints.media-breakpoint-down(md) {
+            justify-self: start
+        }
+    }
+}
+
+.footer-socials {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    >.item {
+
+        >.link {
+
+            &:hover {
+
+                .footer-social--icon {
+
+                    >i {
+                        color: v.$menu-item-hover;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer-social--icon {
+
+    >i {
+        font-size: 22px;
+        color: #FFFFFF;
+        transition: color .2s linear;
+    }
+}
+
+.footer-copyright {
+
+    >.t {
+        font-size: 14px;
+        color: #6D6E76;
+    }
+}

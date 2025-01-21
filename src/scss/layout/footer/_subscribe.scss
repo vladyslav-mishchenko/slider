@@ -1,12 +1,9 @@
 @use '../../settings/breakpoints';
 @use '../../settings/variables' as v;
 
-@use './top';
-@use './subscribe';
-@use './bottom';
-
-.footer {
-    background-color: #232536;
+.footer-subscribe {
+    min-height: 250px;
+    background-color: #4c4c4c50;
 
     // @include breakpoints.media-breakpoint-only(xl) {}
 
@@ -19,6 +16,12 @@
     // @include breakpoints.media-breakpoint-only(xs) {}
 
     @include breakpoints.media-breakpoint-down(md) {
-        padding: 50px 0 25px 0;
+        min-height: 150px;
     }
+
+    >.form {}
+}
+
+.footer-subscribe--preloader {
+    display: none;
 }

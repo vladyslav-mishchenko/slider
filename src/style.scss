@@ -1,12 +1,4 @@
-@import './scss/settings/variables';
-@import './scss/settings/breakpoints';
-@import './scss/settings/reset';
-
-@import './scss/fonts/fonts';
-@import './scss/fonts/icons';
-
-// base
-@import './scss/layout/layout';
-
-// slider
-@import './scss/layout/slider/slider';
+@use './scss/fonts/fonts';
+@use './scss/settings/reset';
+@use './scss/components/components';
+@use './scss/layout/layout';

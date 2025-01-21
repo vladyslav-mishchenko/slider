@@ -7,7 +7,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: slider
+    image: slider:latest
+    container_name: slider
     volumes:
      - .:/app
     ports:

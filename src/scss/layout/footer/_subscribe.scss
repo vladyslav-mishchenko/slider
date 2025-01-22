@@ -1,9 +1,104 @@
 @use '../../settings/breakpoints';
-@use '../../settings/variables' as v;
 
-.footer-subscribe {
-    min-height: 250px;
+.b-footer-subscribe {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    min-height: 256px;
     background-color: #4c4c4c50;
+
+    padding: 0 80px;
+
+    @include breakpoints.media-breakpoint-only(xl) {
+        padding: 0 40px;
+    }
+
+    @include breakpoints.media-breakpoint-only(lg) {
+        padding: 0 20px;
+    }
+
+    // @include breakpoints.media-breakpoint-only(md) {}
+
+    // @include breakpoints.media-breakpoint-only(sm) {}
+
+    @include breakpoints.media-breakpoint-only(xs) {
+        padding: 25px 20px;
+    }
+
+    @include breakpoints.media-breakpoint-down(lg) {
+        grid-template-columns: auto;
+        min-height: auto;
+        padding: 50px 25px;
+    }
+
+    >.c1 {
+        padding-right: 25px;
+
+        // @include breakpoints.media-breakpoint-only(xl) {}
+
+        // @include breakpoints.media-breakpoint-only(lg) {}
+
+        // @include breakpoints.media-breakpoint-only(md) {}
+
+        // @include breakpoints.media-breakpoint-only(sm) {}
+
+        // @include breakpoints.media-breakpoint-only(xs) {}
+
+        @include breakpoints.media-breakpoint-down(lg) {
+            padding-right: 0;
+        }
+    }
+
+    >.c2 {
+        // @include breakpoints.media-breakpoint-only(xl) {}
+
+        // @include breakpoints.media-breakpoint-only(lg) {}
+
+        // @include breakpoints.media-breakpoint-only(md) {}
+
+        // @include breakpoints.media-breakpoint-only(sm) {}
+
+        // @include breakpoints.media-breakpoint-only(xs) {}
+
+        @include breakpoints.media-breakpoint-down(lg) {
+            padding-top: 25px;
+        }
+    }
+}
+
+.footer-subscribe--title {
+
+    >h3 {
+        font-family: f102;
+        font-size: 36px;
+        color: #FFFFFF;
+
+        @include breakpoints.media-breakpoint-only(xl) {
+            font-size: 28px;
+        }
+
+        @include breakpoints.media-breakpoint-only(lg) {
+            font-size: 24px;
+        }
+
+        // @include breakpoints.media-breakpoint-only(md) {}
+
+        // @include breakpoints.media-breakpoint-only(sm) {}
+
+        @include breakpoints.media-breakpoint-only(xs) {
+            font-size: 18px;
+        }
+
+        @include breakpoints.media-breakpoint-down(lg) {
+            font-size: 22px;
+        }
+    }
+}
+
+.footer-form {
+    display: grid;
+    grid-template-columns: 1fr auto;
 
     // @include breakpoints.media-breakpoint-only(xl) {}
 
@@ -16,12 +111,150 @@
     // @include breakpoints.media-breakpoint-only(xs) {}
 
     @include breakpoints.media-breakpoint-down(md) {
-        min-height: 150px;
+        grid-template-columns: auto;
     }
 
-    >.form {}
+    >.c1 {
+        padding-right: 25px;
+
+        // @include breakpoints.media-breakpoint-only(xl) {}
+
+        @include breakpoints.media-breakpoint-only(lg) {
+            padding-right: 15px;
+        }
+
+        // @include breakpoints.media-breakpoint-only(md) {}
+
+        // @include breakpoints.media-breakpoint-only(sm) {}
+
+        // @include breakpoints.media-breakpoint-only(xs) {}
+
+        @include breakpoints.media-breakpoint-down(md) {
+            padding-right: 0;
+        }
+    }
+
+    >.c2 {
+        // @include breakpoints.media-breakpoint-only(xl) {}
+
+        // @include breakpoints.media-breakpoint-only(lg) {}
+
+        // @include breakpoints.media-breakpoint-only(md) {}
+
+        // @include breakpoints.media-breakpoint-only(sm) {}
+
+        // @include breakpoints.media-breakpoint-only(xs) {}
+
+        @include breakpoints.media-breakpoint-down(md) {
+            padding-top: 15px;
+        }
+    }
 }
 
-.footer-subscribe--preloader {
-    display: none;
+.footer-subscribe-form {
+
+    .submit {
+        margin: 0;
+        padding: 0;
+        border: none;
+        outline: none;
+
+        width: 180px;
+        height: 56px;
+
+        background-color: #FFD050;
+        transition: background-color .2s linear;
+
+        font-family: 102;
+        font-size: 18px;
+        color: #232536;
+
+        cursor: pointer;
+
+        &:hover {
+            background-color: #EDC14A;
+        }
+
+        // @include breakpoints.media-breakpoint-only(xl) {}
+
+        @include breakpoints.media-breakpoint-only(lg) {
+            width: 150px;
+        }
+
+        // @include breakpoints.media-breakpoint-only(md) {}
+
+        // @include breakpoints.media-breakpoint-only(sm) {}
+
+        // @include breakpoints.media-breakpoint-only(xs) {}
+
+        @include breakpoints.media-breakpoint-down(lg) {
+            font-size: 16px;
+        }
+
+        @include breakpoints.media-breakpoint-down(md) {
+            width: 100%;
+            height: 35px;
+            font-size: 16px;
+        }
+    }
+}
+
+.footer-form-field {
+    position: relative;
+
+    >.input {
+
+        >input {
+            display: block;
+
+            width: 100%;
+            height: 56px;
+
+            border: 1px solid #4C4C4C;
+
+            background: none;
+            outline: none;
+
+            margin: 0;
+            padding: 0 0 0 15px;
+
+            box-sizing: border-box;
+
+            &::placeholder {
+                font-size: 14px;
+                color: #6D6E76;
+            }
+
+            &[type="text"] {
+                font-size: 14px;
+                color: #6D6E76;
+            }
+
+            &:focus {
+                border: 1px solid #EDC14A;
+            }
+        }
+    }
+
+    >.error {
+        height: 20px;
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: auto;
+        left: 0;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+
+        >.t {
+            padding: 0 7px;
+
+            font-size: 14px;
+            color: #FF0000;
+        }
+    }
 }

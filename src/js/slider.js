@@ -29,7 +29,9 @@ export class Slider extends Elements {
     }
 
     start() {
-        this.setTimeoutId = setTimeout(() => this.run(), this.firstStartTimeout);
+        if (this.slides.length != 0) {
+            this.setTimeoutId = setTimeout(() => this.run(), this.firstStartTimeout);
+        }
     }
 
     stop() {

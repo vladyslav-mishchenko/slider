@@ -3,6 +3,7 @@
 
 @use './header/header';
 @use './content/content';
+@use './content/slider/slider';
 @use './footer/footer';
 
 html {}
@@ -12,11 +13,11 @@ body {
 }
 
 html,
-body{
+body {
     min-height: 100vh;
 }
 
-.website{
+.website {
     min-height: 100vh;
 }
 

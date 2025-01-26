@@ -10,6 +10,6 @@ services:
     image: slider:latest
     container_name: slider
     volumes:
-     - .:/app
+      - .:/app
     ports:
-     - '7777:7777'
+      - '7777:7777'

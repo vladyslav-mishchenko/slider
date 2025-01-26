@@ -1,24 +1,23 @@
 @use '../../settings/variables' as v;
 
-.main-nav{
-    padding-right: 25px;
+.main-nav {
+  padding-right: 25px;
 }
 
-.main-menu{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
+.main-menu {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 
-    >.item{
+  > .item {
+    > .link {
+      font-size: 16px;
+      color: #ffffff;
+      transition: color 0.2s linear;
 
-        >.link{
-            font-size: 16px;
-            color: #FFFFFF;
-            transition: color .2s linear;
-
-            &:hover{
-                color: v.$menu-item-hover;
-            }
-        }
+      &:hover {
+        color: v.$menu-item-hover;
+      }
     }
+  }
 }

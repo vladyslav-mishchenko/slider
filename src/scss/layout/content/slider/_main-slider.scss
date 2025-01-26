@@ -1,162 +1,161 @@
 @use '../../../settings/breakpoints';
 
 .img-slider {
-    position: relative;
+  position: relative;
 }
 
 .img-slider--sections {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 
-    display: grid;
+  display: grid;
 
-    grid-template-columns: auto 1fr auto;
-    grid-template-rows: auto 1fr auto;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto 1fr auto;
 
-    grid-template-areas:
-        "top top top"
-        "left center right"
-        "bottom bottom bottom";
+  grid-template-areas:
+    'top top top'
+    'left center right'
+    'bottom bottom bottom';
 
-    .top {
-        grid-area: top;
-    }
+  .top {
+    grid-area: top;
+  }
 
-    .left {
-        grid-area: left;
-        align-self: center;
-    }
+  .left {
+    grid-area: left;
+    align-self: center;
+  }
 
-    .center {
-        grid-area: center;
-    }
+  .center {
+    grid-area: center;
+  }
 
-    .right {
-        grid-area: right;
-        align-self: center;
-    }
+  .right {
+    grid-area: right;
+    align-self: center;
+  }
 
-    .bottom {
-        grid-area: bottom;
-        justify-self: center;
-    }
+  .bottom {
+    grid-area: bottom;
+    justify-self: center;
+  }
 }
 
 .img-slider--slides {
-    position: relative;
+  position: relative;
 
-    .slide {
-        position: absolute;
-        top: 0;
-        right: auto;
-        bottom: auto;
-        left: auto;
+  .slide {
+    position: absolute;
+    top: 0;
+    right: auto;
+    bottom: auto;
+    left: auto;
 
-        opacity: 0;
-        transition: opacity 4s ease;
+    opacity: 0;
+    transition: opacity 4s ease;
 
-        display: block;
-        max-width: 100%;
-    }
+    display: block;
+    max-width: 100%;
+  }
 
-    .active {
-        position: static;
-        opacity: 1;
-    }
+  .active {
+    position: static;
+    opacity: 1;
+  }
 
-    .na {
-        transition: none;
-    }
+  .na {
+    transition: none;
+  }
 }
 
 .img-slider--miniatures {
-    padding: 10px 0;
+  padding: 10px 0;
 
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 
-    .miniature {
-        width: 15px;
-        height: 15px;
+  .miniature {
+    width: 15px;
+    height: 15px;
 
-        background-color: #FFFFFF;
-        border-radius: 50%;
+    background-color: #ffffff;
+    border-radius: 50%;
 
-        cursor: pointer;
+    cursor: pointer;
 
-        margin: 0 5px 0 5px;
+    margin: 0 5px 0 5px;
 
-        &:first-child {
-            margin: 0 5px 0 0;
-        }
-
-        &:last-child {
-            margin: 0 0 0 5px;
-        }
-
-        &:hover {
-            background-color: #FFB577;
-        }
-
-        // @include breakpoints.media-breakpoint-only(xl) {}
-
-        // @include breakpoints.media-breakpoint-only(lg) {}
-
-        // @include breakpoints.media-breakpoint-only(md) {}
-
-        // @include breakpoints.media-breakpoint-only(sm) {}
-
-        @include breakpoints.media-breakpoint-only(xs) {
-            width: 10px;
-            height: 10px;
-        }
+    &:first-child {
+      margin: 0 5px 0 0;
     }
 
-    .active {
-        background-color: #FFB577;
+    &:last-child {
+      margin: 0 0 0 5px;
     }
+
+    &:hover {
+      background-color: #ffb577;
+    }
+
+    // @include breakpoints.media-breakpoint-only(xl) {}
+
+    // @include breakpoints.media-breakpoint-only(lg) {}
+
+    // @include breakpoints.media-breakpoint-only(md) {}
+
+    // @include breakpoints.media-breakpoint-only(sm) {}
+
+    @include breakpoints.media-breakpoint-only(xs) {
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  .active {
+    background-color: #ffb577;
+  }
 }
 
 .img-slider--nav-btn {
-    padding: 0 15px;
+  padding: 0 15px;
 
-    button {
-        margin: 0;
-        padding: 0;
-        background: none;
-        border: none;
+  button {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
 
-        width: 42px;
-        height: 42px;
+    width: 42px;
+    height: 42px;
 
-        cursor: pointer;
+    cursor: pointer;
 
-        >i {
-            font-size: 32px;
-            color: #FFFFFF;
-            transition: color .2s linear;
+    > i {
+      font-size: 32px;
+      color: #ffffff;
+      transition: color 0.2s linear;
 
-            // @include breakpoints.media-breakpoint-only(xl) {}
+      // @include breakpoints.media-breakpoint-only(xl) {}
 
-            // @include breakpoints.media-breakpoint-only(lg) {}
+      // @include breakpoints.media-breakpoint-only(lg) {}
 
-            // @include breakpoints.media-breakpoint-only(md) {}
+      // @include breakpoints.media-breakpoint-only(md) {}
 
-            // @include breakpoints.media-breakpoint-only(sm) {}
+      // @include breakpoints.media-breakpoint-only(sm) {}
 
-            @include breakpoints.media-breakpoint-only(xs) {
-                font-size: 24px;
-            }
-        }
-
-        &:hover {
-
-            >i {
-                color: #FFB577;
-            }
-        }
+      @include breakpoints.media-breakpoint-only(xs) {
+        font-size: 24px;
+      }
     }
+
+    &:hover {
+      > i {
+        color: #ffb577;
+      }
+    }
+  }
 }

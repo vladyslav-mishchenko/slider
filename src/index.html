@@ -1,78 +1,78 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    {{> head}}
+  </head>
 
-<head>
-  {{> head}}
-</head>
+  <body class="body">
+    <div class="website">
+      {{> header }}
 
-<body class="body">
-  <div class="website">
-    {{> header }}
+      <div class="content">
+        <div class="main-slider g">
+          <div class="container-fluid">
+            <div id="sld1" class="img-slider">
+              <div class="img-slider--slides">
+                <picture class="slide">
+                  <source media="(max-width:768px)" srcset="./images/slider/sm/slide-1.jpg" />
+                  <source media="(max-width:992px)" srcset="./images/slider/md/slide-1.jpg" />
+                  <img class="slide active" src="./images/slider/slide-1.jpg" alt="slide-1" />
+                </picture>
 
-    <div class="content">
-      <div class="main-slider g">
-        <div class="container-fluid">
-          <div id="sld1" class="img-slider">
-            <div class="img-slider--slides">
-              <picture class="slide">
-                <source media="(max-width:768px)" srcset="./images/slider/sm/slide-1.jpg">
-                <source media="(max-width:992px)" srcset="./images/slider/md/slide-1.jpg">
-                <img class="slide active" src="./images/slider/slide-1.jpg" alt="slide-1">
-              </picture>
+                <picture class="slide">
+                  <source media="(max-width:768px)" srcset="./images/slider/sm/slide-2.jpg" />
+                  <source media="(max-width:992px)" srcset="./images/slider/md/slide-2.jpg" />
+                  <img class="slide active" src="./images/slider/slide-2.jpg" alt="slide-1" />
+                </picture>
 
-              <picture class="slide">
-                <source media="(max-width:768px)" srcset="./images/slider/sm/slide-2.jpg">
-                <source media="(max-width:992px)" srcset="./images/slider/md/slide-2.jpg">
-                <img class="slide active" src="./images/slider/slide-2.jpg" alt="slide-1">
-              </picture>
+                <picture class="slide active">
+                  <source media="(max-width:768px)" srcset="./images/slider/sm/slide-3.jpg" />
+                  <source media="(max-width:992px)" srcset="./images/slider/md/slide-3.jpg" />
+                  <img class="slide active" src="./images/slider/slide-3.jpg" alt="slide-1" />
+                </picture>
 
-              <picture class="slide active">
-                <source media="(max-width:768px)" srcset="./images/slider/sm/slide-3.jpg">
-                <source media="(max-width:992px)" srcset="./images/slider/md/slide-3.jpg">
-                <img class="slide active" src="./images/slider/slide-3.jpg" alt="slide-1">
-              </picture>
+                <picture class="slide">
+                  <source media="(max-width:768px)" srcset="./images/slider/sm/slide-4.jpg" />
+                  <source media="(max-width:992px)" srcset="./images/slider/md/slide-4.jpg" />
+                  <img class="slide active" src="./images/slider/slide-4.jpg" alt="slide-1" />
+                </picture>
 
-              <picture class="slide">
-                <source media="(max-width:768px)" srcset="./images/slider/sm/slide-4.jpg">
-                <source media="(max-width:992px)" srcset="./images/slider/md/slide-4.jpg">
-                <img class="slide active" src="./images/slider/slide-4.jpg" alt="slide-1">
-              </picture>
-
-              <picture class="slide">
-                <source media="(max-width:768px)" srcset="./images/slider/sm/slide-5.jpg">
-                <source media="(max-width:992px)" srcset="./images/slider/md/slide-5.jpg">
-                <img class="slide active" src="./images/slider/slide-5.jpg" alt="slide-1">
-              </picture>
-            </div>
-
-            <div class="img-slider--sections">
-              <div class="top"></div>
-
-              <div class="left">
-                <div class="img-slider--nav-btn">
-                  <button class="left-btn">
-                    <i class="icon-arrow-left"></i>
-                  </button>
-                </div>
+                <picture class="slide">
+                  <source media="(max-width:768px)" srcset="./images/slider/sm/slide-5.jpg" />
+                  <source media="(max-width:992px)" srcset="./images/slider/md/slide-5.jpg" />
+                  <img class="slide active" src="./images/slider/slide-5.jpg" alt="slide-1" />
+                </picture>
               </div>
 
-              <div class="center"></div>
+              <div class="img-slider--sections">
+                <div class="top"></div>
 
-              <div class="right">
-                <div class="img-slider--nav-btn">
-                  <button class="right-btn">
-                    <i class="icon-arrow-right"></i>
-                  </button>
+                <div class="left">
+                  <div class="img-slider--nav-btn">
+                    <button class="left-btn">
+                      <i class="icon-arrow-left"></i>
+                    </button>
+                  </div>
                 </div>
-              </div>
 
-              <div class="bottom">
-                <div class="img-slider--miniatures">
-                  <div data-slide="0" class="miniature"></div>
-                  <div data-slide="1" class="miniature"></div>
-                  <div data-slide="2" class="miniature active"></div>
-                  <div data-slide="3" class="miniature"></div>
-                  <div data-slide="4" class="miniature"></div>
+                <div class="center"></div>
+
+                <div class="right">
+                  <div class="img-slider--nav-btn">
+                    <button class="right-btn">
+                      <i class="icon-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="bottom">
+                  <div class="img-slider--miniatures">
+                    <div data-slide="0" class="miniature"></div>
+                    <div data-slide="1" class="miniature"></div>
+                    <div data-slide="2" class="miniature active"></div>
+                    <div data-slide="3" class="miniature"></div>
+                    <div data-slide="4" class="miniature"></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -80,12 +80,9 @@
         </div>
       </div>
 
+      {{> footer }}
     </div>
 
-    {{> footer }}
-  </div>
-
-  {{> scripts }}
-</body>
-
+    {{> scripts }}
+  </body>
 </html>

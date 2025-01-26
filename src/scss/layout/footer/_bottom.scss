@@ -1,57 +1,54 @@
 @use '../../settings/breakpoints';
 @use '../../settings/variables' as v;
 
-.footer-bottom {}
+.footer-bottom {
+}
 
 .b-footer-bottom {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
 
-    >.c1 {}
+  > .c1 {
+  }
 
-    >.c2 {
-        justify-self: end;
-    }
+  > .c2 {
+    justify-self: end;
+  }
 }
 
 .footer-copyright {
-
-    >.t {
-        font-size: 14px;
-        color: #FFFFFF;
-        opacity: 70%;
-    }
+  > .t {
+    font-size: 14px;
+    color: #ffffff;
+    opacity: 70%;
+  }
 }
 
 .footer-socials {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 
-    >.item {
+  > .item {
+    > .link {
+      display: block;
 
-        >.link {
-            display: block;
-
-            &:hover {
-
-                .social-icon {
-
-                    .icon {
-                        color: v.$menu-item-hover;
-                    }
-                }
-            }
+      &:hover {
+        .social-icon {
+          .icon {
+            color: v.$menu-item-hover;
+          }
         }
+      }
     }
+  }
 }
 
 .social-icon {
-
-    .icon {
-        font-size: 24px;
-        color: #FFFFFF;
-        transition: color .2s linear;
-    }
+  .icon {
+    font-size: 24px;
+    color: #ffffff;
+    transition: color 0.2s linear;
+  }
 }
